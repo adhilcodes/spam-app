@@ -4,3 +4,8 @@ pandas==2.0.3
 --find-links https://download.pytorch.org/whl/torch_stable.html
 torch==2.1.0+cpu
 Werkzeug==3.0.1
+urllib3==2.0.7
+Flask-SQLAlchemy==3.1.1
+PyMySQL==1.0.3
+SQLAlchemy==2.0.23
+mysql-connector-python==8.2.0

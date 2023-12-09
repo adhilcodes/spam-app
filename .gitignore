@@ -1,0 +1,8 @@
+# Ignore spam model file
+model/spam_classifier_model.pth 
+
+# Ignore temporary files
+*.tmp
+
+# Ignore virtual environment directories
+venv/

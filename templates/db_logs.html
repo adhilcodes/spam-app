@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Logs</title>
+</head>
+<body>
+    <h1>Prediction Logs</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Text</th>
+            <th>Prediction</th>
+            <th>Timestamp</th>
+        </tr>
+        {% for log in prediction_logs %}
+        <tr>
+            <td>{{ log.id }}</td>
+            <td>{{ log.text }}</td>
+            <td>{{ log.prediction }}</td>
+            <td>{{ log.timestamp }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

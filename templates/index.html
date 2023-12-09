@@ -19,5 +19,6 @@
     {% if prediction is defined %}
         <p>Prediction: {{ prediction }}</p>
     {% endif %}
+    <p><a href="{{ url_for('prediction_logs') }}">View Prediction Logs</a></p>
 </body>
 </html>
