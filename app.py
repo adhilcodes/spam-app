@@ -1,19 +1,20 @@
 from flask import Flask, render_template, request, redirect, url_for
 from sklearn.feature_extraction.text import CountVectorizer
-# from utils import log_prediction
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 import torch
 from torch import nn
 from urllib.parse import quote
+import os
 
 
 app = Flask(__name__)
-password = quote(YOUR DB PASSWORD)
-app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql+pymysql://adhil:{password}@localhost/flaskapp'
+password = quote('Adhil@1999')
+app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql+pymysql://root:{password}@localhost/flaskapp'
+# app.config['SQLALCHEMY_DATABASE_URI'] = f"mysql+pymysql://{os.getenv('root')}:{os.getenv('password')}@{os.getenv('mysql')}/flaskapp"
 db = SQLAlchemy(app)
 
-
+    
 # logging prediction requests and results in the db
 class PredictionLog(db.Model):
     id = db.Column(db.Integer, primary_key=True)

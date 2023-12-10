@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spam-app-deployment
+spec:
+  replicas: 2  # number of replicas 
+  selector:
+    matchLabels:
+      app: spam-app
+  template:
+    metadata:
+      labels:
+        app: spam-app
+    spec:
+      containers:
+      - name: spam-app
+        image: spam-app:v1
+        ports:
+        - containerPort: 5000
+        #env
+        #- name: MYSQL_DATABASE_URI
+          #value: "mysql+pymysql://adhil:your_password@mysql/flaskapp"
